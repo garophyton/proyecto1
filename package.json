@@ -2,7 +2,7 @@
     "name": "practica-pp-react",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://garophyton.github.io/proyecto1/build",
+    "homepage": "https://garophyton.github.io/proyecto1",
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^6.6.0",
         "@fortawesome/react-fontawesome": "^0.2.2",
