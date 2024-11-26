@@ -15,7 +15,7 @@ const Catalogo = () => {
       <Menu />
       <div className="pxdiv">
         <div className="card-container">
-          <Card imageUrl={'/imagenes/products.jpeg'} price={'45'} onDetails={() => toggleForm(0)} />
+          <Card imageUrl={'imagenes/products.jpeg'} price={'45'} onDetails={() => toggleForm(0)} />
           <div className={`form-container ${openFormIndex === 0 ? 'open' : ''}`}>
             <form className="formCard">
               <div style={{ color: 'white', fontSize: 'medium' }}>
@@ -28,7 +28,7 @@ const Catalogo = () => {
           </div>
         </div>
         <div className="card-container">
-          <Card imageUrl={'/imagenes/cartera1.jpeg'} price={'65'} onDetails={() => toggleForm(1)} />
+          <Card imageUrl={'imagenes/cartera1.jpeg'} price={'65'} onDetails={() => toggleForm(1)} />
           <div className={`form-container ${openFormIndex === 1 ? 'open' : ''}`}>
             <form className="formCard">
               <div style={{ color: 'white', fontSize: 'medium' }}>
@@ -41,7 +41,7 @@ const Catalogo = () => {
           </div>
         </div>
         <div className="card-container">
-          <Card imageUrl={'/imagenes/cartera2.jpeg'} price={'60'} onDetails={() => toggleForm(2)} />
+          <Card imageUrl={'imagenes/cartera2.jpeg'} price={'60'} onDetails={() => toggleForm(2)} />
           <div className={`form-container ${openFormIndex === 2 ? 'open' : ''}`}>
             <form className="formCard">
               <div style={{ color: 'white', fontSize: 'medium' }}>
@@ -54,7 +54,7 @@ const Catalogo = () => {
           </div>
         </div>
         <div className="card-container">
-          <Card imageUrl={'/imagenes/cartera3.jpeg'} price={'70'} onDetails={() => toggleForm(3)} />
+          <Card imageUrl={'imagenes/cartera3.jpeg'} price={'70'} onDetails={() => toggleForm(3)} />
           <div className={`form-container ${openFormIndex === 3 ? 'open' : ''}`}>
             <form className="formCard">
               <div style={{ color: 'white', fontSize: 'medium' }}>

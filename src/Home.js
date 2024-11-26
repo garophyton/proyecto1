@@ -7,9 +7,9 @@ const Home = () => {
     <>
       <Menu/>
       <div className="contenido-home">
-        <img src="/imagenes/imgNews.jpeg" className='News' alt="news"/>
-        <img src="/imagenes/imgPrincipal.jpeg" className='imgPrincipal' alt="imagenprincipal"/>
-        <img src="/imagenes/imgMasVendidas.jpeg" className='MV' alt="mas vendidas"/>
+        <img src="imagenes/imgNews.jpeg" className='News' alt="news"/>
+        <img src="imagenes/imgPrincipal.jpeg" className='imgPrincipal' alt="imagenprincipal"/>
+        <img src="imagenes/imgMasVendidas.jpeg" className='MV' alt="mas vendidas"/>
       </div>
     </>
   )
