@@ -1,0 +1,224 @@
+/*general*/
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+#root 
+{
+    width: 100%;
+    height: 100%;
+}
+/*menu superior*/
+.logo {
+    width: 135px; 
+    height: 135px; 
+}
+.header
+{
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height:135px;
+    align-items: center;
+}
+.menuLateral 
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    gap: 3rem;
+}
+.buttonsM
+{
+    z-Index: 4;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-Size: medium;
+    background-image: linear-gradient(45deg, #00E5FF, #FF4081);
+    color: white;
+    border: none;
+    transition: background-image 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    width: 132px;
+}
+.buttonsM:hover 
+{
+    background-image: linear-gradient(45deg, #1DE9B6, #651FFF);
+}
+.formG
+{
+    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    z-index:4 ;   
+    margin-top: 1px;
+    background-color: #333;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    color: #fff;
+}
+.showForm {
+    display: flex; 
+    flex-direction: column; 
+}
+.labelF
+{     
+    width: 80px;
+    color: #FFF;  
+    padding: 5px 5px;  
+    border-radius: 5px;  
+    background-image: linear-gradient(45deg, #FF4081, #00E5FF);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+/*home*/
+.contenido-home
+{
+    z-index: 1;
+    padding-top: 5rem;
+    display: flex;
+}
+.imgPrincipal
+{   
+    margin:auto;
+    width: 450x;
+    height: 330px;
+    border-radius: 20px;
+}
+.News
+{
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+}
+.MV
+{
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+}
+/*catalogo*/
+.pxdiv
+{
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center;
+    position: relative;
+}
+/*card*/
+.card-container {
+    position: relative; 
+    margin: 20px;
+    overflow: visible; 
+    z-index: 3; 
+}
+.card 
+{
+    z-index: 3;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+}
+.card-image 
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.btn
+{   
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-Size: medium;
+    background-image: linear-gradient(45deg, #00E5FF, #FF4081);
+    color: white;
+    border: none;
+    transition: background-image 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+.form-container {
+    position: absolute;
+    top: 45%; 
+    left: 0;
+    width: 120px;
+    overflow: visible; /* Cambia aquí para permitir desbordamiento */
+    transition: opacity 0.5s, visibility 0s linear 0.5s;
+    visibility: hidden;
+    opacity: 0; 
+    z-index: 10; /* Incrementa esto si es necesario */
+    display: none; 
+}
+
+.form-container.open {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
+    height: 120px; /* Permite que el contenedor se expanda según el contenido */
+}
+.formCard
+{
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    width: 150px;
+    height: 80px;
+    background-color: #333;
+}
+/*info*/
+.ctext
+{
+    position: relative;
+    height:210px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    text-justify: center;
+}
+
+
+@media (max-width:1200px)
+{
+
+.imgPrincipal
+{
+    margin-top: 4rem;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+}
+.News
+{
+    margin-top: 4rem;
+    width: 80px;
+    height: 80px;
+}
+.MV
+{
+    margin-top: 4rem;
+    width: 80px;
+    height: 80px;
+}
+.ctext
+{
+    padding-left: 1rem;
+    padding-top: 6rem;
+}
+}
