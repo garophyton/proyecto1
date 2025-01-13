@@ -13,25 +13,31 @@ html, body
     height: 100%;
 }
 /*menu superior*/
-.logo {
+.logo 
+{
     width: 135px; 
     height: 135px; 
 }
 .header
 {
     z-index: 2;
-    display: flex;
     width: 100%;
     height:135px;
     align-items: center;
+    display: flex;
+}
+.contenedorb
+{
+    justify-Items:center;
+    width:100%;
+    position:absolute;
 }
 .menuLateral 
 {
-    position: relative;
-    width: 100%;
+    width:fit-content;
     display: flex;
-    justify-content: center; 
-    gap: 3rem;
+    gap: 2rem;
+    height: 45px;
 }
 .buttonsM
 {
@@ -45,6 +51,7 @@ html, body
     border: none;
     transition: background-image 0.3s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    height: 43px;
     width: 132px;
 }
 .buttonsM:hover 
@@ -54,12 +61,7 @@ html, body
 .formG
 {
     display: none;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    z-index:4 ;   
-    margin-top: 1px;
+    z-index:5;   
     background-color: #333;
     border-radius: 8px;
     border: 1px solid #ddd;
@@ -67,9 +69,13 @@ html, body
     padding: 20px;
     color: #fff;
 }
-.showForm {
+.showForm 
+{
     display: flex; 
-    flex-direction: column; 
+    position:absolute;
+    flex-direction: column;
+    right: 29%;
+    top:13%;
 }
 .labelF
 {     
@@ -115,7 +121,8 @@ html, body
     position: relative;
 }
 /*card*/
-.card-container {
+.card-container 
+{
     position: relative; 
     margin: 20px;
     overflow: visible; 
@@ -150,7 +157,8 @@ html, body
     transition: background-image 0.3s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
-.form-container {
+.form-container 
+{
     position: absolute;
     top: 45%; 
     left: 0;
@@ -162,8 +170,8 @@ html, body
     z-index: 10; /* Incrementa esto si es necesario */
     display: none; 
 }
-
-.form-container.open {
+.form-container.open 
+{
     display: block; 
     opacity: 1;
     visibility: visible;
@@ -194,31 +202,80 @@ html, body
 }
 
 
-@media (max-width:1200px)
+@media (max-width:768px)
 {
-
-.imgPrincipal
-{
-    margin-top: 4rem;
-    margin: auto;
-    width: 120px;
-    height: 120px;
-}
-.News
-{
-    margin-top: 4rem;
-    width: 80px;
-    height: 80px;
-}
-.MV
-{
-    margin-top: 4rem;
-    width: 80px;
-    height: 80px;
-}
-.ctext
-{
-    padding-left: 1rem;
-    padding-top: 6rem;
-}
+    .logo
+        {
+            width: 30%;    
+            height: 100%;
+            max-width: 120px;
+            max-height: 140px;
+        }
+    .header
+        {
+            display: inline;
+            height: fit-content;
+            position: relative;
+        }
+    .contenedorb
+        {
+            position: relative;
+        }
+    .menuLateral 
+        {
+            position: relative;
+            height: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    .buttonsM
+        {
+            width: 30%;
+            font-Size:auto;
+            
+        }
+    .showForm
+        {
+            display: flex; 
+            position:absolute;
+            flex-direction: column;
+            right: 20%;
+            top:100%;    
+        }
+    .contenido-home
+        {
+            padding-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    .imgPrincipal
+        {   
+            margin:auto;
+            border-radius: 10%;
+            height: 35%;
+            width: 80%;
+            margin-top: 1rem;
+        }
+    .News
+        {
+            border-radius: 10%;
+            margin:auto;
+            margin-top: 1rem;
+            height: 35%;
+            width: 80%;
+        }
+    .MV
+        {
+            border-radius: 10%;
+            margin:auto;
+            margin-top: 1rem;
+            height: 35%;
+            width: 80%;
+        }
+    .ctext
+        {
+            padding-left: 1rem;
+            padding-top: 6rem;
+        }
 }

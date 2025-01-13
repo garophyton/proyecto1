@@ -20,46 +20,43 @@ const Menu = () => {
   return (
 
       <div className='header'>
-        {imgLogo}  
-        <div className='menuLateral'>
-          <CBNavigation to="/home">Inicio</CBNavigation>
-          <CBNavigation to="/Catalogo">Catalogo</CBNavigation>
-          <CBNavigation to="/Info">Info</CBNavigation>
-          <div>
-          <ButtonP className='buttonsM iS' text='iniciar sesion' onClick={() => handleClick('login')}/> 
-          {showForm.login && (             
-          <form className={`formG ${showForm.login ? 'showForm' : ''}`}>
-              <label className='labelF'>Email:</label>
-              <input type="email" id="email" name="email" required/>
-              <label className='labelF' for="password">Contraseña:</label>
-              <input type="password" id="password" name="password" required/>
-              <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>   
-              <ButtonP className='buttonsM' text='Ingresar' onClick={useSubmit}/>
-              </div>
-          </form>           
-          )}; 
+        {imgLogo} 
+        <div className='contenedorb'> 
+          <div className='menuLateral'>
+            <CBNavigation to="/home">Inicio</CBNavigation>
+            <CBNavigation to="/Catalogo">Catalogo</CBNavigation>
+            <CBNavigation to="/Info">Info</CBNavigation>
+            <ButtonP className='buttonsM' text='iniciar sesion' onClick={() => handleClick('login')}/>       
+            <ButtonP className='buttonsM' text='registrate' onClick={() => handleClick('register')}/>               
           </div>
-          <div>                  
-          <ButtonP className='buttonsM' text='registrate' onClick={() => handleClick('register')}/>
-          {showForm.register && (           
+        </div>
+        {showForm.login && (             
+              <form className={`formG ${showForm.login ? 'showForm' : ''}`}>
+                <label className='labelF' for="email">Email:</label>
+                <input type="email" id="email" name="email" autoComplete="email" required />
+                <label className='labelF' for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" autoComplete="current-password" required/>          
+                <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>   
+                    <ButtonP className='buttonsM' text='Ingresar' onClick={useSubmit} />
+                </div>
+              </form>         
+            )}
+        {showForm.register && (           
           <form className={`formG ${showForm.register ? 'showForm' : ''}`}>                             
               <label className='labelF'>Nombre:</label>
-              <input type="text" name="nombre"/>                   
+              <input type="text" name="nombre" id="nombre" autoComplete="off" required/>                   
               <label className='labelF'>Apellido:</label>
-              <input type="text" name="apellido"/> 
+              <input type="text" name="apellido" id="apellido" autoComplete="off" required/> 
               <label className='labelF'>Email:</label>
-              <input type="email" name="email"/>
+              <input type="email" name="email" for="email" autoComplete="email" required/>
               <label className='labelF'>Contraseña</label>
-              <input type="password" name="contraseña"/>
+              <input type="password" name="password" id="password" autoComplete="current-password" required/>
               <div style={{display: 'flex', justifyContent: 'center', width: '100%' }}>                                       
               <ButtonP className='buttonsM' text='Registrar' onClick={useSubmit}/>    
               </div>                  
           </form>
-          )};
-          </div>                   
-        </div>                        
-      </div>
-     
+        )}                                     
+      </div> 
   );
 };
 
